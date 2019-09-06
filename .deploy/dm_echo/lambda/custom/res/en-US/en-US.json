@@ -1,0 +1,276 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "types": [
+                {
+                    "name": "aSlot",
+                    "values": [
+                        {
+                            "id": null,
+                            "name": {
+                                "value": "go on a hike",
+                                "synonyms": []
+                            }
+                        },
+                        {
+                            "id": null,
+                            "name": {
+                                "value": "reconsider",
+                                "synonyms": []
+                            }
+                        },
+                        {
+                            "id": null,
+                            "name": {
+                                "value": "great",
+                                "synonyms": []
+                            }
+                        },
+                        {
+                            "id": null,
+                            "name": {
+                                "value": "continue on to the peak",
+                                "synonyms": []
+                            }
+                        },
+                        {
+                            "id": null,
+                            "name": {
+                                "value": "take a break",
+                                "synonyms": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "bSlot",
+                    "values": [
+                        {
+                            "id": null,
+                            "name": {
+                                "value": "none",
+                                "synonyms": []
+                            }
+                        },
+                        {
+                            "id": null,
+                            "name": {
+                                "value": "call it a day and head down",
+                                "synonyms": []
+                            }
+                        }
+                    ]
+                }
+            ],
+            "intents": [
+                {
+                    "name": "FlexibleAnswerIntent",
+                    "samples": [
+                        "{aSlot}",
+                        "{bottles}",
+                        "{bottles} bottle",
+                        "{bottles} bottles",
+                        "{bSlot}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "aSlot",
+                            "type": "aSlot"
+                        },
+                        {
+                            "name": "bottles",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "bSlot",
+                            "type": "bSlot"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel",
+                        "never mind",
+                        "nevermind",
+                        "forget it"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help",
+                        "help me",
+                        "can you help me"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.LoopOffIntent",
+                    "samples": [
+                        "loop off"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.LoopOnIntent",
+                    "samples": [
+                        "loop",
+                        "loop on",
+                        "keep playing this"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": [
+                        "next",
+                        "skip",
+                        "skip forward"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "no",
+                        "no thanks"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": [
+                        "pause",
+                        "pause that"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": [
+                        "go back",
+                        "skip back",
+                        "back up"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": [
+                        "repeat",
+                        "say that again",
+                        "repeat that"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": [
+                        "resume",
+                        "continue",
+                        "keep going"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.ShuffleOffIntent",
+                    "samples": [
+                        "stop shuffling",
+                        "shuffle off",
+                        "turn off shuffle"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.ShuffleOnIntent",
+                    "samples": [
+                        "shuffle",
+                        "shuffle on",
+                        "shuffle the music",
+                        "shuffle mode"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.StartOverIntent",
+                    "samples": [
+                        "start over",
+                        "restart",
+                        "start again"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "stop",
+                        "off",
+                        "shut up"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "yes",
+                        "yes please",
+                        "sure"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": [
+                        "scroll up"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": [
+                        "scroll left"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": [
+                        "scroll down"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": [
+                        "scroll right"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": [
+                        "page up"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": [
+                        "page down"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": [
+                        "show more"
+                    ],
+                    "slots": []
+                }
+            ],
+            "invocationName": "dm robot"
+        }
+    }
+}
