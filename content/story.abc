@@ -37,7 +37,7 @@
 	*then
 		hear dwarf{
 	    if charactersNumber == members{
-	     -> dwarfInfo
+	     -> start
 	    }
 	    if charactersNumber < members{
 	      if charactersNumber == 1{
@@ -50,12 +50,12 @@
 	        set numberEndings to 'th'
 	        }
 	    increase charactersNumber by 1
-	    -> createCharacter
+	    -> dwarf
 	    }
 	    }
 	    hear elf{
 	    if charactersNumber == members{
-	     -> elfInfo
+	     -> start
 	    }
 	    if charactersNumber < members{
 	        
@@ -69,43 +69,94 @@
 	        set numberEndings to 'th'
 	        }
 	    increase charactersNumber by 1
-	    -> createCharacter
+	    -> elf
 	    }
 	    }
-@elfInfo
-    *say
-        Your elf character has a variety of natural abilities, the result of thousands of years of elven refinement.
-@dwarfInfo
-    *say
-        Your dwarf character has an assortment	of inborn abilities,	part and parcel	of dwarven nature. You want to know more about the age, alignment or size?
-    *then
-        hear age {
-       ->dwarfAge
-          }
-          hear alignment{
-          -> dwarfAlignement
-          }
-          hear size{
-          -> dwarfSize
-          }
-          
 
+@elf
+	*say
+        You may select or get more info on Elves.
+    *then
+        hear select elf{
+        -> elfSelect
+        }
+        hear elf info{
+        -> elfInfo
+        }
+
+@dwarf
+	*say
+        You may select or get more info on Dwarves.
+    *then
+        hear select dwarf{
+        -> dwarfSelect
+        }
+        hear dwarf info{
+        -> dwarfInfo
+        }
+        
+
+@elfSelect
+	*then
+	<-> createCharacter
+
+@dwarfSelect
+	*then
+	<-> createCharacter
+
+@elfInfo
+	*say
+        Your elf character has a variety of natural abilities, the result of thousands of years of elven refinement.
+    *then
+        hear return,back{
+		-> dwarf
+		}
+
+@dwarfInfo
+	*say
+		Your dwarf character has an assortment	of inborn abilities,	part and parcel	of dwarven nature. You want to know more about the age, alignment or size?
+	*then
+		hear age {
+        ->dwarfAge
+        }
+        hear alignment{
+        -> dwarfAlignement
+        }
+        hear size{
+        -> dwarfSize
+        }
+		hear return,back{
+		-> dwarf
+		}
 @dwarfAge
-     *say
-          Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years. Alignment. Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.
+	*say
+		Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years.
+	*then
+	-> dwarfInfo
+
 @dwarfSize
-    *say
-        Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.
+	*say
+		Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.
+	*then
+	-> dwarfInfo
+
 @dwarfAlignement
-    *say
-        Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.
+	*say
+		Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.
+	*then
+	-> dwarfInfo
+
 @too many
 	*say
 		I am sorry that is too many people to play.
+	*then
+	-> createParty
 
 @not enough
 	*say
 		You should have atleast one member.
+	*then
+	-> createParty
 
 @selectAdventure
 	*say
