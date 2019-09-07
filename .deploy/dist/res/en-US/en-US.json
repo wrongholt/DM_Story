@@ -8,35 +8,21 @@
                         {
                             "id": null,
                             "name": {
-                                "value": "go on a hike",
+                                "value": "create party",
                                 "synonyms": []
                             }
                         },
                         {
                             "id": null,
                             "name": {
-                                "value": "reconsider",
+                                "value": "dwarf",
                                 "synonyms": []
                             }
                         },
                         {
                             "id": null,
                             "name": {
-                                "value": "great",
-                                "synonyms": []
-                            }
-                        },
-                        {
-                            "id": null,
-                            "name": {
-                                "value": "continue on to the peak",
-                                "synonyms": []
-                            }
-                        },
-                        {
-                            "id": null,
-                            "name": {
-                                "value": "take a break",
+                                "value": "age",
                                 "synonyms": []
                             }
                         }
@@ -55,7 +41,26 @@
                         {
                             "id": null,
                             "name": {
-                                "value": "call it a day and head down",
+                                "value": "elf",
+                                "synonyms": []
+                            }
+                        },
+                        {
+                            "id": null,
+                            "name": {
+                                "value": "alignment",
+                                "synonyms": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "cSlot",
+                    "values": [
+                        {
+                            "id": null,
+                            "name": {
+                                "value": "size",
                                 "synonyms": []
                             }
                         }
@@ -67,10 +72,11 @@
                     "name": "FlexibleAnswerIntent",
                     "samples": [
                         "{aSlot}",
-                        "{bottles}",
-                        "{bottles} bottle",
-                        "{bottles} bottles",
-                        "{bSlot}"
+                        "{members}",
+                        "{members} total",
+                        "{members} party members",
+                        "{bSlot}",
+                        "{cSlot}"
                     ],
                     "slots": [
                         {
@@ -78,12 +84,16 @@
                             "type": "aSlot"
                         },
                         {
-                            "name": "bottles",
+                            "name": "members",
                             "type": "AMAZON.NUMBER"
                         },
                         {
                             "name": "bSlot",
                             "type": "bSlot"
+                        },
+                        {
+                            "name": "cSlot",
+                            "type": "cSlot"
                         }
                     ]
                 },

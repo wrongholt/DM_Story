@@ -1,7 +1,8 @@
 {
-  "CustomFruitType": [
-    "apple",
-    "pear",
-    "orange"
+  "numberEndings": [
+    "st",
+    "nd",
+    "rd",
+    "th"
   ]
 }

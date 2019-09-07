@@ -6,7 +6,7 @@
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "a0e310f4534ff2f959312d4666cefe27"
+          "eTag": "398172ea6c52953b1cdc204664a85525"
         },
         "lambda": [
           {
@@ -18,7 +18,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-dm_echo-default",
             "handler": "index.handler",
-            "revisionId": "8431b9eb-fbb3-4fca-b067-d19675cf6398",
+            "revisionId": "b901d45d-b950-4dfb-bafc-aa5f0e896c0f",
             "runtime": "nodejs8.10"
           }
         ]
